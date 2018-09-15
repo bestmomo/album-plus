@@ -1,0 +1,75 @@
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Sweetalert
+@import '~sweetalert2/src/sweetalert2.scss';
+
+// Magnific popup
+@import '~magnific-popup/dist/magnific-popup.css';
+
+html, body {
+  height: 100%;
+}
+body {
+  padding-top: 70px;
+}
+a:hover {
+  text-decoration: none;
+}
+.container-fluid {
+  padding-bottom: 70px;
+}
+.text-title, h1 {
+  color: white;
+}
+.custom-file-label::after {
+  content: "Parcourir";
+}
+.fixed-bottom {
+  opacity: 0.8;
+}
+.site-wrapper {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "center";
+}
+.site-wrapper-inner {
+  grid-area: center;
+  align-self: center;
+}
+.card-columns {
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 4;
+  }
+}
+.star-rating {
+  direction: rtl;
+  display: block;
+}
+.star-rating div {
+  display: inline-block;
+  font-size: 15px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+.star-yellow,
+.star-rating div:hover,
+.star-rating div:hover ~ div {
+  color: #f2b600
+}
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
