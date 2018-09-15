@@ -290,7 +290,7 @@
             $('.card-columns').magnificPopup({
                 delegate: 'a.image-link',
                 type: 'image',
-                tClose: '@lang("Fermer (Esc)")',
+                tClose: '@lang("Fermer (Esc)")'@if($images->count() > 1),
                 gallery: {
                     enabled: true,
                     tPrev: '@lang("Précédent (Flèche gauche)")',
@@ -300,7 +300,7 @@
                     buildControls: function () {
                         this.contentContainer.append(this.arrowLeft.add(this.arrowRight))
                     }
-                }
+                }@endif
             })
 
             $('a.toggleIcons').click((e) => {
