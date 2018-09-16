@@ -36,7 +36,7 @@ class UserCreated extends Notification implements ShouldQueue
      * @param  mixed  $notifiable
      * @return array
      */
-    public function via()
+    public function via($notifiable)
     {
         return ['mail'];
     }
@@ -47,7 +47,7 @@ class UserCreated extends Notification implements ShouldQueue
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail()
+    public function toMail($notifiable)
     {
         return (new MailMessage)
                     ->subject(__('Nouvel utilisateur'))
