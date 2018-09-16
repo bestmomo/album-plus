@@ -3,12 +3,9 @@
 namespace App\Models;
 
 use App\Events\UserCreated;
-use App\Notifications\ResetPassword as ResetPasswordNotification;
-use App\Notifications\UserVerifyEmail;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Psy\Util\Json;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -53,16 +50,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'created' => UserCreated::class,
     ];
 
-    /**
-     * Send the password reset notification.
-     *
-     * @param  string  $token
-     * @return void
-     */
-    public function sendPasswordResetNotification($token)
-    {
-        $this->notify(new ResetPasswordNotification($token));
-    }
 
     /**
      * Get the images.
@@ -141,15 +128,5 @@ class User extends Authenticatable implements MustVerifyEmail
             'adult' => $value,
             'pagination' => $this->settings->pagination
         ]);
-    }
-
-    /**
-     * Send the email verification notification.
-     *
-     * @return void
-     */
-    public function sendEmailVerificationNotification()
-    {
-        $this->notify(new UserVerifyEmail);
     }
 }
