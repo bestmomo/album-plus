@@ -17,7 +17,7 @@ class Admin
     {
         $user = $request->user ();
 
-        if ($user && $user->role === 'admin') {
+        if ($user && $user->admin) {
             return $next($request);
         }
 

@@ -17,7 +17,7 @@ class ImagePolicy
      */
     public function before(User $user)
     {
-        if ($user->role === 'admin') {
+        if ($user->admin) {
             return true;
         }
     }

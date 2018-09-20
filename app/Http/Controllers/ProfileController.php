@@ -50,7 +50,7 @@ class ProfileController extends Controller
             'email' => $request->email,
             'settings' => json_encode ([
                 'pagination' => (integer)$request->pagination,
-                'adult' => isset($request->adult)
+                'adult' => $request->filled('adult'),
             ]),
         ]);
 

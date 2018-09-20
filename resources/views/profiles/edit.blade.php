@@ -71,6 +71,6 @@
         })
     </script>
 
-    @include('partials.script-delete', ['text' => __('Vraiment supprimer votre compte ?'), 'return' => 'reload'])
+    @include('partials.script-delete', ['text' => __('Vraiment supprimer votre compte ?'), 'return' => 'home'])
 
 @endsection
