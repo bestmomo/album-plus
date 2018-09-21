@@ -20,6 +20,9 @@
         @isset($user)
             <h2 class="text-title mb-3">{{ __('Photos de ') . $user->name }}</h2>
         @endif
+        @isset($album)
+            <h2 class="text-title mb-3">{{ $album->name }}</h2>
+        @endif
         <div class="d-flex justify-content-center">
             {{ $images->links() }}
         </div>

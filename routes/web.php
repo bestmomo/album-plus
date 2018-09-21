@@ -40,13 +40,12 @@ Route::middleware ('auth', 'verified')->group (function () {
         'except' => 'show'
     ]);
 
-    Route::name('image.albums')->get('image/{image}/albums', 'ImageController@albums');
-
     Route::name ('image.')->middleware ('ajax')->group (function () {
         Route::prefix('image')->group(function () {
             Route::name ('albums.update')->put ('{image}/albums', 'ImageController@albumsUpdate');
             Route::name ('description')->put ('{image}/description', 'ImageController@descriptionUpdate');
             Route::name ('adult')->put ('{image}/adult', 'ImageController@adultUpdate');
+            Route::name('albums')->get('{image}/albums', 'ImageController@albums');
         });
         Route::name ('rating')->put ('rating/{image}', 'ImageController@rate');
     });
