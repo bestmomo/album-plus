@@ -11,12 +11,12 @@ class UserController extends Controller
     /**
      * Album repository.
      *
-     * @var \App\Repositories\AlbumRepository
+     * @var \App\Repositories\UserRepository
      */
     protected $repository;
 
     /**
-     * Create a new AlbumController instance.
+     * Create a new UserController instance.
      *
      * @param  \App\Repositories\UserRepository $repository
      */

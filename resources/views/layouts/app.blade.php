@@ -74,6 +74,7 @@
                                         route('category.index'),
                                         route('category.edit', request()->category?: 0),
                                         route('orphans.index'),
+                                        route('maintenance.index'),
                                         route('user.index')
                                     )}}" href="#" id="navbarDropdownGestCat" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
