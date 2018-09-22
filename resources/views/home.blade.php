@@ -46,8 +46,7 @@
                         </em>
                         <div class="pull-right">
                             <em>
-                                (<span class="image-click">{{ $image->clicks }}</span> @lang('clics'))
-                                {{ $image->created_at->formatLocalized('%x') }}
+                                (<span class="image-click">{{ $image->clicks }}</span> {{ trans_choice(__('vue|vues'), $image->clicks) }}) {{ $image->created_at->formatLocalized('%x') }}
                             </em>
                         </div>
                         <div class="star-rating" id="{{ $image->id }}">
