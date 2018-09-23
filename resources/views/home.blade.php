@@ -283,7 +283,7 @@
                     url: that.attr('data-link')
                 }).done((data) => {
                     if(data.increment) {
-                        let numberElement = that.next().find('.image-click')
+                        let numberElement = that.siblings('div.card-footer').find('.image-click')
                         numberElement.text(parseInt(numberElement.text()) + 1)
                     }
                 })
