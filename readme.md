@@ -2,4 +2,4 @@
 
 Album-plus is a tutorial application made with Laravel 5.7.
 
-To know more [go to my blog](https://laravel.sillo.org).
+To know more [go to my blog](https://laravel.sillo.org/laravel-5/).
